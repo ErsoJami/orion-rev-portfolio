@@ -1,0 +1,11 @@
+{
+  "logdir": "results/tensorboard",
+  "runs": [
+    "smol_training",
+    "dataset_profile",
+    "matched_rev_comparison"
+  ],
+  "training_scalar_points": 691,
+  "source": "aggregate JSON/JSONL artifacts only; no command texts or TensorBoard message logs",
+  "comparison_file": "results/matched_comparison.json"
+}

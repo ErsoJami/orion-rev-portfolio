@@ -1,0 +1,110 @@
+{
+  "package": "Orion Smol + Rev pointer portfolio snapshot",
+  "source_run": "../../runs/architecture/20261005-214145-570535-Smol-broad-Rev-lowLR-fullpass",
+  "training": {
+    "updates": 1875,
+    "selected_step": 0,
+    "train_rows": 15000,
+    "validation_rows": 1000,
+    "seed": 4118,
+    "body_lr": 2E-06,
+    "head_lr": 1E-05,
+    "full_run_seconds": 6300.711793100001
+  },
+  "dataset": {
+    "file": "data/train_validation.json",
+    "sha256": "36d3da6ce39fcd3377187ba186c8b10d09fd26afc39e120b28f82a6ba9ee8f94",
+    "canonical_payload_sha256": "d97bc64dd770d4de2c562cee44c3612de99e7a13f43bad3f3da8c90f1a566937",
+    "train_rows": 15000,
+    "validation_rows": 1000,
+    "sealed_test_included": false,
+    "methodology_document": "DATASET.md",
+    "audit_file": "results/dataset_audit.json",
+    "audit_file_sha256": "983cdb8a03bc295382d11e4839078516aa5442de7bf0bf971376103dd7d27dd7",
+    "generation_seed": 4117,
+    "added_rows": 7000,
+    "added_category_quotas": {
+      "direct": 500,
+      "question_request": 1500,
+      "argument_correction": 1200,
+      "negation_scope": 600,
+      "cancel": 400,
+      "explain": 400,
+      "quotation": 400,
+      "past_report": 400,
+      "hypothetical": 400,
+      "missing_argument": 600,
+      "unavailable_tool": 600
+    }
+  },
+  "weights": {
+    "last_checkpoint": {
+      "file": "weights/last.pt",
+      "sha256": "f89cf194f3f51b7c1cb7b765e6b4623d79d2f300d0564a50365cb9bfaac873b4",
+      "expected_source_sha256": "f89cf194f3f51b7c1cb7b765e6b4623d79d2f300d0564a50365cb9bfaac873b4",
+      "purpose": "final full-pass resumable state, step 1875"
+    },
+    "initial_checkpoint": {
+      "file": "weights/initial.pt",
+      "sha256": "665c082ee51c7abbdf19490f6e169abefb082783f05bc6082eed8ae340ce543b",
+      "expected_source_sha256": "665c082ee51c7abbdf19490f6e169abefb082783f05bc6082eed8ae340ce543b",
+      "purpose": "warm start for reproducing this training phase"
+    },
+    "native_rev_initial": {
+      "file": "weights/native_rev_initial.pt",
+      "sha256": "8728c418d57255c803b45661be44a2366f78b004fb0dc42015de96c9263a940e",
+      "purpose": "Smol Rev adapter used to initialize model structure"
+    },
+    "published_original_rev_adapter": {
+      "file": "weights/original_rev/checkpoint.pt",
+      "sha256": "6417fd6b8f41449730957f827b8d009ce69d5feadaddd41951a3dff8ad772b96",
+      "expected_source_sha256": "6417fd6b8f41449730957f827b8d009ce69d5feadaddd41951a3dff8ad772b96",
+      "purpose": "published Original Rev comparison"
+    }
+  },
+  "comparison": {
+    "file": "results/matched_comparison.json",
+    "sha256": "285045d1cb66e21615031cceeebe7b8dcf679284c9082753215251dabeb45624",
+    "rows": 1000,
+    "seed": 29001,
+    "hardware": "NVIDIA GeForce RTX 5060 Ti",
+    "metrics": "Exact status, tool, and arguments; batch-1 forward p50/p95"
+  },
+  "source_snapshot": {
+    "root": "src/",
+    "trainer": "src/scripts/train_smol_diverse_rev.py",
+    "model": "src/scripts/train_smol_full_rev.py",
+    "comparison": "src/compare.py",
+    "upstream_rev_commit": "7090e4458075865853cdc791b81436d580a7dc73",
+    "dataset_generator": "src/experiments/broad_action_data.py",
+    "dataset_builder": "src/scripts/create_broad_action_dataset.py",
+    "tensorboard_builder": "src/build_tensorboard.py"
+  },
+  "tensorboard": {
+    "logdir": "results/tensorboard",
+    "runs": [
+      "smol_training",
+      "dataset_profile",
+      "matched_rev_comparison"
+    ],
+    "training_scalar_points": 691,
+    "builder": "src/build_tensorboard.py",
+    "source_metrics_file": "results/training_metrics.jsonl",
+    "source_metrics_sha256": "39daedfc69549a344e1c74bf872992679542d02dea9fdf2a4132f735f21bfa3a",
+    "raw_example_messages_copied": false
+  },
+  "speed": {
+    "orion": {
+      "p95_ms": 69.51448499858088,
+      "peak_allocated_mib": 2770.5546875,
+      "p50_ms": 67.3366500013799,
+      "serial_queries_per_second_from_p50": 14.850753638315947
+    },
+    "original_rev": {
+      "p95_ms": 516.603450000548,
+      "peak_allocated_mib": 8143.9501953125,
+      "p50_ms": 431.34939999981725,
+      "serial_queries_per_second_from_p50": 2.3183062269251415
+    }
+  }
+}

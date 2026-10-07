@@ -1,0 +1,7 @@
+**/__pycache__/
+*.py[cod]
+*.partial
+.venv/
+.venv-*/
+results/tensorboard/
+results/tensorboard.*.log

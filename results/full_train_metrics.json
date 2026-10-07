@@ -1,0 +1,102 @@
+{
+  "source_run": "../../runs/architecture/20261005-214145-570535-Smol-broad-Rev-lowLR-fullpass",
+  "checkpoint": "../../runs/architecture/20261005-214145-570535-Smol-broad-Rev-lowLR-fullpass/last.pt",
+  "checkpoint_sha256": "f89cf194f3f51b7c1cb7b765e6b4623d79d2f300d0564a50365cb9bfaac873b4",
+  "step": 1875,
+  "commands": 15000,
+  "no_training": true,
+  "test_opened": false,
+  "dataset_hash": "d97bc64dd770d4de2c562cee44c3612de99e7a13f43bad3f3da8c90f1a566937",
+  "dataset_path": "data/train_validation.json",
+  "train_rows": 15000,
+  "purpose": "whole train of LAST, not validation-selected BEST",
+  "evaluator_sha256": "cbbd380613a65dcd8d276c738189fa659a433c840332675647adb7d81321a17b",
+  "run_dir": "../../runs/architecture/20261005-234114-248035-Smol-last-full-train-fit",
+  "train": {
+    "exact": 0.9898,
+    "macro_candidate_exact": 0.9800080132187955,
+    "loss": 0.053319185280038144,
+    "rows": 15000,
+    "unique_rows": 15000,
+    "per_decision_exact": {
+      "EXECUTE": 0.983217665615142,
+      "CLARIFY": 0.9966101694915255,
+      "UNSUPPORTED": 0.9966101694915255,
+      "NO_ACTION": 0.9975757575757576
+    },
+    "per_candidate_exact": {
+      "[\"NO_ACTION\", []]": 0.9975757575757576,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 10}, \"tool\": \"timer.create\"}]]": 0.9784172661870504,
+      "[\"CLARIFY\", []]": 0.9966101694915255,
+      "[\"EXECUTE\", [{\"arguments\": {\"mode\": \"sleep\"}, \"tool\": \"mode.activate\"}]]": 0.9975429975429976,
+      "[\"EXECUTE\", [{\"arguments\": {\"mode\": \"workout\"}, \"tool\": \"mode.activate\"}]]": 0.995,
+      "[\"EXECUTE\", [{\"arguments\": {}, \"tool\": \"music.pause\"}]]": 0.9940374787052811,
+      "[\"EXECUTE\", [{\"arguments\": {\"level\": 20}, \"tool\": \"music.volume.set\"}]]": 0.995850622406639,
+      "[\"EXECUTE\", [{\"arguments\": {\"type\": \"walk\"}, \"tool\": \"workout.start\"}]]": 0.9975550122249389,
+      "[\"UNSUPPORTED\", []]": 0.9966101694915255,
+      "[\"EXECUTE\", [{\"arguments\": {}, \"tool\": \"music.resume\"}]]": 0.9752770673486786,
+      "[\"EXECUTE\", [{\"arguments\": {\"level\": 0}, \"tool\": \"music.volume.set\"}]]": 0.9755102040816327,
+      "[\"EXECUTE\", [{\"arguments\": {\"mode\": \"work\"}, \"tool\": \"mode.activate\"}]]": 0.9953596287703016,
+      "[\"EXECUTE\", [{\"arguments\": {\"level\": 100}, \"tool\": \"music.volume.set\"}]]": 0.9794238683127572,
+      "[\"EXECUTE\", [{\"arguments\": {\"level\": 40}, \"tool\": \"music.volume.set\"}]]": 0.9920634920634921,
+      "[\"EXECUTE\", [{\"arguments\": {\"type\": \"general\"}, \"tool\": \"workout.start\"}]]": 0.9950124688279302,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 30}, \"tool\": \"timer.create\"}]]": 0.9851851851851852,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 300}, \"tool\": \"timer.create\"}]]": 0.9458128078817734,
+      "[\"EXECUTE\", [{\"arguments\": {\"type\": \"run\"}, \"tool\": \"workout.start\"}]]": 0.9976798143851509,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 1800}, \"tool\": \"timer.create\"}]]": 0.9468085106382979,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 3600}, \"tool\": \"timer.create\"}]]": 0.9122807017543859,
+      "[\"EXECUTE\", [{\"arguments\": {\"level\": 60}, \"tool\": \"music.volume.set\"}]]": 0.9925373134328358,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 1200}, \"tool\": \"timer.create\"}]]": 0.9786096256684492,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 600}, \"tool\": \"timer.create\"}]]": 0.9479166666666666,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 120}, \"tool\": \"timer.create\"}]]": 0.9746192893401016,
+      "[\"EXECUTE\", [{\"arguments\": {\"level\": 80}, \"tool\": \"music.volume.set\"}]]": 0.9886363636363636,
+      "[\"EXECUTE\", [{\"arguments\": {\"durationSeconds\": 60}, \"tool\": \"timer.create\"}]]": 0.9482758620689655
+    },
+    "false_action_rate": 0.0011307420494699647,
+    "scope_exact": 1.0,
+    "scope_quartet_all_correct": 1.0,
+    "order_consistency": null,
+    "error_cost": 0.012333333333333333,
+    "cost_definition": "wrong decision costs 1; false EXECUTE for empty gold costs 5 total",
+    "brier": 0.016876790702101067,
+    "ece15": 0.006563591015338825,
+    "argument_error_views": 75,
+    "per_category_exact": {
+      "past_report": 1.0,
+      "argument_correction": 0.960261569416499,
+      "missing_argument": 0.9962962962962963,
+      "question_request": 0.9910414333706606,
+      "retained_old_train": 0.9973333333333333,
+      "unavailable_tool": 0.9962962962962963,
+      "direct": 0.9991235758106923,
+      "negation_scope": 0.9717741935483871,
+      "hypothetical": 1.0,
+      "explain": 0.99875,
+      "quotation": 0.99875,
+      "cancel": 0.99375
+    },
+    "first_order_unique_rows": 15000,
+    "first_order_correct": 14847,
+    "first_order_exact_ci95": [
+      0.9880619199870249,
+      0.9912872621584332
+    ],
+    "first_order_empty_rows": 7075,
+    "first_order_false_actions": 8,
+    "first_order_false_action_ci95": [
+      0.0005730757610473136,
+      0.0022298687207164825
+    ],
+    "interval_scope": "first permutation per unique command; correlated grammar siblings still limit population interpretation"
+  },
+  "cold_reload_first_600_predictions_and_probabilities_identical": true,
+  "message_audit": {
+    "run": "../../runs/architecture/20261005-234114-248035-Smol-last-full-train-fit",
+    "messages": 15000,
+    "phase_counts": {
+      "train_last": 15000
+    },
+    "all_jsonl_equal_tensorboard": true,
+    "all_correctness_recomputed": true
+  }
+}

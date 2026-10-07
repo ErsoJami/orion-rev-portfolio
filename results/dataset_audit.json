@@ -1,0 +1,40 @@
+{
+  "train_rows": 15000,
+  "retained_rows": 8000,
+  "added_unique_cores": 7000,
+  "validation_rows": 1000,
+  "added_categories": {
+    "direct": 500,
+    "question_request": 1500,
+    "argument_correction": 1200,
+    "negation_scope": 600,
+    "cancel": 400,
+    "explain": 400,
+    "quotation": 400,
+    "past_report": 400,
+    "hypothetical": 400,
+    "missing_argument": 600,
+    "unavailable_tool": 600
+  },
+  "added_decisions": {
+    "EXECUTE": 3800,
+    "NO_ACTION": 2000,
+    "CLARIFY": 600,
+    "UNSUPPORTED": 600
+  },
+  "whole_train_decisions": {
+    "NO_ACTION": 4125,
+    "EXECUTE": 7925,
+    "CLARIFY": 1475,
+    "UNSUPPORTED": 1475
+  },
+  "rejects": {},
+  "dataset_sha256": "d97bc64dd770d4de2c562cee44c3612de99e7a13f43bad3f3da8c90f1a566937",
+  "source": "Codex-authored grammars, no independent human labels or real-user-data claim",
+  "sealed_test_sha256": "33105fbcb7d3249ee61955787ed81daa99410f833254d4b8d9f146d48940ab72",
+  "sealed_access": "Integrity-only normalized core hashing; no labels used or model predictions",
+  "heldout_or_old_core_collisions": 0,
+  "test_scored": false,
+  "validation_unchanged": true,
+  "train_classification": "15k engineered synthetic commands; not15k independent real utterances"
+}
