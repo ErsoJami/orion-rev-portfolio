@@ -1,3 +1,2 @@
-*.pt filter=lfs diff=lfs merge=lfs -text
 weights/*.pt !text !filter !merge !diff
 weights/**/*.pt !text !filter !merge !diff
